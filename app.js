@@ -9,7 +9,7 @@ var randtoken = require('rand-token');
 var timeout = require('botbuilder-timeout');
 
 const appInsights = require("applicationinsights");
-appInsights.setup("c311c581-21a6-4df2-9cad-ebcdc30f6d08");
+appInsights.setup("<key>");
 appInsights.start();
 
 const {createDatetimePrompt} = require('botbuilder-prompts');
@@ -23,8 +23,8 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'rissobot@gmail.com',
-        pass: 'R1550Bot'
+        user: '<mail>',
+        pass: '<pass>'
     }   
 });
 
@@ -43,7 +43,7 @@ const knowledgedb = [
     {
         'confirm' : 'instalación de software', 
         'validate' : true, 
-        'answer' : 'Hola, ingresa a http://appstore.progreso.com/ para ver el catálogo de software que puedes instalar. Si no está en el catálogo, llama al Centro de Soluciones (extensión 9911) y con gusto te apoyarán.', 
+        'answer' : 'Hola, para ver el catálogo de software que puedes instalar. Si no está en el catálogo, llama al Centro de Soluciones (extensión 9911) y con gusto te apoyarán.', 
         'options' : ['Cómo puedo instalar software', 'Necesito instalar software', 'Necesito instalar', 'Como puedo instalar'], 
         'form' : [], 
         'choices' : [], 
